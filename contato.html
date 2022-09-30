@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Carolina Barros</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="form-style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/8cd635fca2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho">
+      <!-- Logo -->
+      <h1 class="logo">CarolinaBarros</h1>
+      <!-- Logo -->
+      <!-- Menu principal -->
+      <nav class="menu-principal">
+        <ul>
+          <li class="cabecalho-oculto"><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <!-- Menu principal -->
+      <!-- Medias social -->
+      <ul class="midias-sociais">
+        <li><a href="http://"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/carolina-barros-dev"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="http://"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      <!-- Medias social -->
+    </div>
+  </header>
+
+  <h1>Entre em contato</h1>
+
+  <div class="form-container">
+    <form name="meu_form" onsubmit="return enviarMensagem()" method="post">
+      <div class="linha">
+        <div class="col-25">
+          <label for="name">Nome</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="nome" name="nome" placeholder="Insira aqui seu nome">
+        </div>
+      </div>
+      <div class="linha">
+        <div class="col-25">
+          <label for="email">E-mail</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="Insira aqui seu e-mail">
+        </div>
+      </div>
+      <div class="linha">
+        <div class="col-25">
+          <label for="telefone">Telefone</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="telefone" name="telefone" placeholder="Telefone para contato: (DDD) XXXXXXXXX">
+        </div>
+      </div>
+      <div class="linha">
+        <div class="col-25">
+          <label for="mensagem">Mensagem</label>
+        </div>
+        <div class="col-75">
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui sua mensagem" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="botao-form linha">
+        <input type="submit" value="Enviar">
+      </div>
+      <div class="botao-form linha">
+        <a href="index.html">
+          <button type="button">Voltar ao Portfólio</button>
+        </a>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    <footer>Carolina Barros 2022. Todos os direitos reservados.</footer>
+  </div>
+
+  <script>
+
+    function enviarMensagem() {
+
+      const nomeDoRemetente = document.forms["meu_form"]["nome"].value;
+      const emailDoRemetente = document.forms["meu_form"]["email"].value;
+
+      if (nomeDoRemetente === "") {
+        alert("Obrigado pela mensagem! Entrarei em contato assim que possível.");
+      } else {
+        alert(`Agradeço por sua mensagem, ${nomeDoRemetente}. Entrarei em contato assim que possível no e-mail preenchido: ${emailDoRemetente}`);
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
