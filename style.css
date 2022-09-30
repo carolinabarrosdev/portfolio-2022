@@ -30,11 +30,10 @@
     --cor-cinza: #010326;
     --cor-roxo: #15044E;
     --cor-violeta:#9067C6;
-    --cor-verde:#437346; 
-
-
+    --cor-verde:#437346;
+    --cor-cinza-claro: rgb(240, 240, 240);
   }
-  body {
+  body{
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -87,6 +86,7 @@
    }
    .midias-sociais{
        width:7%;
+       min-width: 30px;
        margin-left: 1rem;
    }
    .menu-principal a,
@@ -298,4 +298,4 @@
      color:#fff;
      text-align: center;
     padding: 20px 0;
-          }
+}
